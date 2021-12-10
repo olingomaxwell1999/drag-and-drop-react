@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: 'Neucha', sans-serif;
+}
+
+body{
+
+    .App{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #ff1252;
+
+        .heading{
+            text-transform: uppercase;
+            font-size: 40px;
+            margin: 30px 0;
+            color: white;
+            z-index: 1;
+            text-align: center;
+        }
+    }
+}
+
+.inputField {
+    display: flex;
+    width: 95%;
+    position: relative;
+    align-items: center;
+
+    .inputBox{
+       width: 100%;
+       border-radius: 50px;
+       padding: 20px 30px;
+       font-size: 25px;
+       border: none; 
+       transition: 0.2s;
+       box-shadow: inset 0 0 5px  black; 
+
+       &:focus {
+          box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5); 
+          outline: none;
+       }    
+    } 
+
+    .inputSubmit{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin: 12px;
+        border-radius: 50px;
+        right: 0;
+        border: none;
+        font-size: 15px;
+        background-color: #ff1252;
+        color: white;
+        transition: all 0.2s;
+        box-shadow: 0 0 10px black;
+
+        &:hover {
+            background-color: #ff1252;
+        }   
+
+        &:active{
+            transform: scale(0.8);
+            box-shadow: 0 0 5px black;
+        }
+    } 
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.todos{
+    display: flex;
+    width: 47.5%; 
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(50, 195, 205);
+
+    .todosHeading {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+.dragactive {
+    background-color: rgb(0, 211, 236);
+}
+
+.dragremove {
+    background-color: rgb(255, 38, 0);
+}
+
+.drag{
+    box-shadow: 0 0 20px black;
+}
+
+.oneTodo{
+    display: flex;    
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    transition: 0.2s;
+
+    &:hover {
+        box-shadow: 0 0 5px black;
+        transform: scale(1.03);
+    }
+
+    .singleText{
+        flex: 1;
+        padding: 5px;
+        border: none;
+        font-size: 20px;
+
+        &:focus {
+            outline: none;        
+        }
+
+    }
+
+    .icon {
+        margin-left: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }    
+}
+
+.remove {
+    background-color: aqua;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 1100px) {
+    .oneTodo {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .todos {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .body{
+
+        .App{
+
+            .heading{
+                margin: 15px 0;
+                font-size: 35px;
+            }
+        }
+    }
+}
